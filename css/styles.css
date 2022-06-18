@@ -268,10 +268,6 @@ img{
 
 /*--Portfolio--*/
 
-.main-filter{
-    display: none;
-}
-
 .button-list{
     list-style: none;
     display: flex;
