@@ -25,6 +25,12 @@ ul{
     padding: 0;
 }
 
+img{
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
 .section{
     padding-top: 94px;
     padding-bottom: 94px;
@@ -32,8 +38,9 @@ ul{
 
 .container{
     width: 1200px;
+    padding: 0px 15px;  
     margin-left: auto;
-    margin-right: auto;     
+    margin-right: auto;
 }
 
 .header{
@@ -45,11 +52,12 @@ ul{
     align-items: center;
 }
 
-.header .nav-list{
-    width: 294px;
-    justify-content: space-between;
-    margin-left: auto;
-    margin-right: auto;
+.nav-contacts-list-item:not(:first-child){
+    margin-left: 50px;
+}
+
+.nav-list-item:not(:last-child){
+    margin-right: 50px;    
 }
 
 .header .nav-contacts{
@@ -60,7 +68,6 @@ ul{
     display: block;
     padding-top: 32px;
     padding-bottom: 32px;
-    margin-left: 50px;
 }
 
 .logo{
@@ -85,7 +92,7 @@ ul{
     color: var(--primary-text-color);
     font-weight: 500;
     font-size: 14px;
-    line-height: 1.14px;
+    line-height: 1.14;
     letter-spacing: 0.02em;
     text-decoration: none;
 }
@@ -104,7 +111,7 @@ ul{
     color: var(--secondary-text-color);
     font-weight: 500;
     font-size: 14px;
-    line-height: 1.14px;
+    line-height: 1.14;
     letter-spacing: 0.02em;
     text-decoration: none;
 }
@@ -121,18 +128,17 @@ ul{
     text-align: center;
 }
 
-.hero .container{
-    max-width: 696px;
-}
-
 .hero-header{
+    width: 696px;
+    margin-left: auto;
+    margin-right: auto;
     color: var(--alternative-text-color);
     font-weight: 900;
     font-size: 44px;
     line-height: 1.36;
     text-transform: uppercase;
     text-align: center;
-    padding-bottom: 30px;
+    margin-bottom: 30px;
     letter-spacing: 0.06em;
 }
 
@@ -154,16 +160,18 @@ ul{
     cursor: pointer;
 }
 
-.advantage-title{
+.visually-hidden{
     display: none;
 }
 
 .advantage-list{
     display: flex;
-    width: 1170px;
-    justify-content: space-between;
     margin-left: auto;
     margin-right: auto;
+}
+
+.advantage-list-item:not(:last-child){
+    margin-right: 30px;
 }
 
 .advantage-list-item{
@@ -188,6 +196,10 @@ ul{
     letter-spacing: 0.03em;
 }
 
+.works{
+    padding-top: 0px;
+}
+
 .works-title,
 .team-title{
     color: var(--primary-text-color);
@@ -202,14 +214,14 @@ ul{
 .works-list,
 .team-list{
     display: flex;
-    width: 1170px;
-    justify-content: space-between;
-    margin-left: auto;
-    margin-right: auto;
 }
 
 .works-list-item{
     list-style: none;
+}
+
+.works-list-item:not(:last-child){
+    margin-right: 30px;
 }
 
 .team{
@@ -228,17 +240,24 @@ ul{
     font-weight: 500;
     font-size: 16px;
     line-height: 1.19;
-    padding-top: 30px;
-    padding-bottom: 10px;
+    margin-bottom: 10px;
     text-align: center;
     letter-spacing: 0.03em;
+}
+
+.team-list-item:not(:last-child){
+    margin-right: 30px;
+}
+
+.team-member-data{
+    padding-top: 30px;
+    padding-bottom: 30px;
 }
 
 .team-member-text{
     color: var(--secondary-text-color);
     font-size: 16px;
     line-height: 1.19;
-    margin-bottom: 30px;
     text-align: center;
     letter-spacing: 0.03em;
 }
@@ -257,10 +276,11 @@ ul{
     list-style: none;
     display: flex;
     margin-bottom: 50px;
-    width: 611px;
-    margin-left: auto;
-    margin-right: auto;
-    justify-content: space-evenly;
+    justify-content: center;
+}
+
+.button-list-item:not(:last-child){
+    margin-right: 8px;
 }
 
 .button-list-item-btn{
@@ -284,21 +304,18 @@ ul{
 .project-list{
     display: flex;
     flex-wrap: wrap;
-    flex-basis: calc((100% - 30px) / 3);
     gap: 30px;
-    width: 1170px;
-    justify-content: space-between;
-    margin-left: auto;
-    margin-right: auto;
 }
 
 .project-list-item{
     list-style: none;
-    border-bottom: 1px solid #eeeeee;
 }
 
 .project-list-item-description{
     padding: 20px 24px;
+    border-left: 1px solid #eeeeee;
+    border-bottom: 1px solid #eeeeee;
+    border-right: 1px solid #eeeeee;
 }
 
 .project-title{
@@ -331,7 +348,7 @@ ul{
 
 .contact-list {
     list-style: none;
-    padding-top: 20px;
+    font-style: normal;
 }
 
 .contact-list-item-address{
@@ -348,20 +365,37 @@ ul{
     color: var(--active-elements-text-color);
 }
 
-.contact-list-item{
+.contact-list-item-link{
     color: rgba(255, 255, 255, 0.6);
     font-size: 14px;
     line-height: 1.71;
     letter-spacing: 0.03em;
-    padding-top: 9px;
     text-decoration: none;
 }
 
-.contact-list-item:hover,
-.contact-list-item:focus{
+.contact-list-item:not(:last-child){
+    margin-bottom: 9px;
+}
+
+.contact-list-item-link:hover,
+.contact-list-item-link:focus{
     color: var(--active-elements-text-color);
 }
 
 .logo-footer{
+    color: var(--active-elements-text-color);
+    font-family: var(--secondary-font-family);
+    font-size: 26px;
+    line-height: 1.19;
+    font-weight: 700;
+    letter-spacing: 0.03em;
+    text-decoration: none;
+}
+
+.logo-footer-icon {
     color: var(--alternative-text-color);
+}
+
+.footer-address{
+    margin-top: 20px;
 }

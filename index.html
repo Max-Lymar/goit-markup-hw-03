@@ -64,7 +64,7 @@
       <section class="advantage section">
         <div class="container">
           <!--Скрыть заголовок ниже в CSS-->
-          <h2 class="advantage-title">Наши преимущества и экспертиза</h2>
+          <h2 class="visually-hidden">Наши преимущества и экспертиза</h2>
           <ul class="advantage-list">
             <li class="advantage-list-item">
               <h3 class="advantage-list-title">Внимание к деталям</h3>
@@ -139,8 +139,10 @@
                 width="270"
                 height="260"
               />
-              <h3 class="team-member-title">Игорь Демьяненко</h3>
-              <p class="team-member-text" lang="en">Product Designer</p>
+              <div class="team-member-data">
+                <h3 class="team-member-title">Игорь Демьяненко</h3>
+                <p class="team-member-text" lang="en">Product Designer</p>
+              </div>
             </li>
             <li class="team-list-item">
               <img
@@ -149,8 +151,10 @@
                 width="270"
                 height="260"
               />
-              <h3 class="team-member-title">Ольга Репина</h3>
-              <p class="team-member-text" lang="en">Frontend Developer</p>
+              <div class="team-member-data">
+                <h3 class="team-member-title">Ольга Репина</h3>
+                <p class="team-member-text" lang="en">Frontend Developer</p>
+              </div>
             </li>
             <li class="team-list-item">
               <img
@@ -159,8 +163,10 @@
                 width="270"
                 height="260"
               />
-              <h3 class="team-member-title">Николай Тарасов</h3>
-              <p class="team-member-text" lang="en">Marketing</p>
+              <div class="team-member-data">
+                <h3 class="team-member-title">Николай Тарасов</h3>
+                <p class="team-member-text" lang="en">Marketing</p>
+              </div>
             </li>
             <li class="team-list-item">
               <img
@@ -169,8 +175,10 @@
                 width="270"
                 height="260"
               />
-              <h3 class="team-member-title">Михаил Ермаков</h3>
-              <p class="team-member-text" lang="en">UI Designer</p>
+              <div class="team-member-data">
+                <h3 class="team-member-title">Михаил Ермаков</h3>
+                <p class="team-member-text" lang="en">UI Designer</p>
+              </div>
             </li>
           </ul>
         </div>
@@ -178,28 +186,30 @@
     </main>
     <footer class="footer">
       <div class="container">
-        <a class="logo" href="/index.html"
-          >Web<span class="logo-footer">Studio</span></a
+        <a class="logo-footer" href="/index.html"
+          >Web<span class="logo-footer-icon">Studio</span></a
         >
-        <ul class="contact-list">
-          <li>
-            <a
-              class="contact-list-item-address"
-              href="https://goo.gl/maps/H55FPHmbqtdmZxtt6"
-              >г. Киев, пр-т Леси Украинки, 26</a
-            >
-          </li>
-          <li>
-            <a class="contact-list-item" href="mailto:info@devstudio.com"
-              >info@devstudio.com</a
-            >
-          </li>
-          <li>
-            <a class="contact-list-item" href="tel:+380961111111"
-              >+38 096 111 11 11</a
-            >
-          </li>
-        </ul>
+        <address class="footer-address">
+          <ul class="contact-list">
+            <li class="contact-list-item">
+              <a
+                class="contact-list-item-address"
+                href="https://goo.gl/maps/H55FPHmbqtdmZxtt6"
+                >г. Киев, пр-т Леси Украинки, 26</a
+              >
+            </li>
+            <li class="contact-list-item">
+              <a class="contact-list-item-link" href="mailto:info@devstudio.com"
+                >info@devstudio.com</a
+              >
+            </li>
+            <li class="contact-list-item">
+              <a class="contact-list-item-link" href="tel:+380961111111"
+                >+38 096 111 11 11</a
+              >
+            </li>
+          </ul>
+        </address>
       </div>
     </footer>
   </body>
